@@ -1,0 +1,34 @@
+<div class="page-hero">
+  <h1>Keynote & Plenary Speakers</h1>
+  <div class="hero-divider"></div>
+  <p>Distinguished experts sharing cutting-edge research at IICCCS-2026</p>
+</div>
+<section class="speakers-page">
+  <div class="container">
+    <div class="speakers-grid">
+      @for (sp of speakers; track sp.id) {
+        <div class="speaker-card glass-card">
+          <div class="card-top">
+            <div class="avatar">{{ sp.name[0] }}</div>
+            <div class="speaker-meta">
+              <h3>{{ sp.name }}</h3>
+              <p class="desig">{{ sp.designation }}</p>
+              <p class="org">{{ sp.organization }}</p>
+            </div>
+          </div>
+          <p class="bio">{{ sp.bio }}</p>
+          <div class="card-actions">
+            <a [href]="sp.linkedin || '#'" class="btn-outline" target="_blank">LinkedIn Profile</a>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="tba-notice glass-card">
+      <span class="tba-icon">🎤</span>
+      <div>
+        <h3>More Speakers To Be Announced</h3>
+        <p>Additional keynote and invited speakers will be confirmed closer to the conference date. Stay tuned!</p>
+      </div>
+    </div>
+  </div>
+</section>

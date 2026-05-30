@@ -1,0 +1,27 @@
+.page-hero {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-3) 100%);
+  padding: 8rem 1.5rem 3.5rem; text-align: center; border-bottom: 1px solid var(--glass-border);
+  h1 { font-family: 'Orbitron', monospace; font-size: clamp(1.5rem,3vw,2.2rem);
+       background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  p { color: var(--text-muted); font-family: 'Inter', sans-serif; margin-top: 0.5rem; }
+}
+.hero-divider { width: 60px; height: 3px; background: var(--gradient); margin: 0.75rem auto; border-radius: 2px; }
+.guidelines-page { background: var(--dark-2); }
+.guidelines-grid { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: start; }
+.sidebar { position: sticky; top: 80px; }
+.sticky-nav {
+  background: var(--glass); border: 1px solid var(--glass-border); border-radius: 10px; padding: 1rem;
+  display: flex; flex-direction: column; gap: 0.25rem;
+  a { color: var(--text-muted); text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 6px;
+      font-size: 0.85rem; font-family: 'Rajdhani', sans-serif; transition: all 0.2s;
+      &:hover { color: var(--accent); background: rgba(0,212,255,0.07); }
+  }
+}
+.guide-section { padding: 1.75rem 2rem; margin-bottom: 1.5rem;
+  h3 { font-family: 'Orbitron', monospace; font-size: 0.9rem; color: var(--accent); margin-bottom: 1rem; }
+  p { color: var(--text-muted); font-family: 'Inter', sans-serif; line-height: 1.7; font-size: 0.875rem; margin-bottom: 0.75rem; strong { color: var(--text); } }
+  ul, ol { padding-left: 1.25rem; color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 0.875rem;
+    li { padding: 0.3rem 0; strong { color: var(--accent); } } }
+}
+.download-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
+@media (max-width: 800px) { .guidelines-grid { grid-template-columns: 1fr; } .sidebar { position: static; } }

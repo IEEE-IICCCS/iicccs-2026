@@ -1,0 +1,72 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0.75rem 0;
+  background: rgba(3, 8, 15, 0.4);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &.scrolled {
+    background: rgba(3, 8, 15, 0.92);
+    border-bottom-color: rgba(0,212,255,0.15);
+    padding: 0.5rem 0;
+  }
+}
+
+.nav-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex; align-items: center; gap: 0.75rem; text-decoration: none;
+  .ieee-badge {
+    background: linear-gradient(135deg, #0a4fa3, #00d4ff);
+    color: #fff; font-family: 'Orbitron', monospace; font-weight: 900;
+    font-size: 0.85rem; padding: 0.35rem 0.6rem; border-radius: 4px;
+    letter-spacing: 1px;
+  }
+  .brand-text {
+    display: flex; flex-direction: column;
+    .conf-name { font-family: 'Orbitron', monospace; font-size: 1rem; font-weight: 700; color: #fff; }
+    .conf-sub { font-size: 0.65rem; color: var(--text-muted); font-family: 'Inter', sans-serif; }
+  }
+}
+
+.nav-links {
+  display: flex; list-style: none; gap: 0.25rem;
+  a {
+    color: var(--text-muted); text-decoration: none; padding: 0.4rem 0.75rem;
+    border-radius: 5px; font-family: 'Rajdhani', sans-serif; font-size: 0.9rem;
+    font-weight: 500; letter-spacing: 0.3px; transition: all 0.2s ease;
+    &:hover, &.active {
+      color: var(--accent);
+      background: rgba(0,212,255,0.08);
+    }
+  }
+}
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; background: none; border: none;
+  cursor: pointer; padding: 0.25rem;
+  span {
+    display: block; width: 24px; height: 2px;
+    background: var(--text); border-radius: 2px; transition: all 0.3s ease;
+  }
+  &.open {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; background: rgba(3,8,15,0.97);
+    border-bottom: 1px solid var(--glass-border); padding: 1rem;
+    &.open { display: flex; }
+    a { padding: 0.65rem 1rem; }
+  }
+}

@@ -1,0 +1,80 @@
+<div class="page-hero">
+  <h1>Registration</h1>
+  <div class="hero-divider"></div>
+  <p>Register for IICCCS-2026 and be part of the premier IEEE conference</p>
+</div>
+<section class="reg-page">
+  <div class="container">
+    <div class="notice-card glass-card">
+      <span>ℹ️</span>
+      <p>Registration deadline: <strong>31 October 2026</strong>. At least one author per accepted paper must register at full rate before camera-ready submission.</p>
+    </div>
+
+    <h2 class="sec-title">Registration Fees</h2>
+    <div class="fee-table-wrap">
+      <table class="fee-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Early Bird<br><small>(before 15 Oct)</small></th>
+            <th>Regular<br><small>(after 15 Oct)</small></th>
+            <th>Foreign Author</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of fees; track row.category) {
+            <tr>
+              <td>{{ row.category }}</td>
+              <td class="price">{{ row.early }}</td>
+              <td class="price">{{ row.regular }}</td>
+              <td class="price foreign">{{ row.foreign }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="payment-section">
+      <div class="payment-card glass-card">
+        <h3>Bank Transfer Details</h3>
+        <div class="bank-details">
+          <div class="bank-row"><span>Account Name</span><strong>IEEE Student Branch AEC</strong></div>
+          <div class="bank-row"><span>Bank</span><strong>State Bank of India</strong></div>
+          <div class="bank-row"><span>Branch</span><strong>Asansol Engineering College</strong></div>
+          <div class="bank-row"><span>Account No.</span><strong>XXXXXXXXXX (to be announced)</strong></div>
+          <div class="bank-row"><span>IFSC Code</span><strong>SBIN0XXXXXX (to be announced)</strong></div>
+        </div>
+        <div class="qr-placeholder">
+          <div class="qr-box">QR<br>Code<br>Coming<br>Soon</div>
+          <p>Scan to pay via UPI</p>
+        </div>
+      </div>
+
+      <div class="steps-card glass-card">
+        <h3>Registration Steps</h3>
+        <ol>
+          <li>Complete the online registration form</li>
+          <li>Make payment via NEFT/RTGS/UPI</li>
+          <li>Send payment receipt to <strong>sb.ieee.aec&#64;gmail.com</strong></li>
+          <li>Receive confirmation email within 48 hours</li>
+          <li>Upload camera-ready paper after confirmation</li>
+        </ol>
+        <a href="mailto:sb.ieee.aec@gmail.com" class="btn-primary" style="margin-top:1.25rem;display:inline-block">
+          Contact for Registration
+        </a>
+      </div>
+    </div>
+
+    <div class="includes glass-card">
+      <h3>Registration Includes</h3>
+      <div class="includes-grid">
+        <div>✅ Conference proceedings (IEEE Xplore)</div>
+        <div>✅ Access to all sessions & keynotes</div>
+        <div>✅ Conference kit & certificate</div>
+        <div>✅ Lunch & refreshments (2 days)</div>
+        <div>✅ Gala dinner (1 day)</div>
+        <div>✅ Workshop access</div>
+      </div>
+    </div>
+  </div>
+</section>

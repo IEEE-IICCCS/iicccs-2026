@@ -1,0 +1,33 @@
+.page-hero {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-3) 100%);
+  padding: 8rem 1.5rem 3.5rem; text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+  h1 { font-family: 'Orbitron', monospace; font-size: clamp(1.5rem,3vw,2.2rem);
+       background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  p { color: var(--text-muted); font-family: 'Inter', sans-serif; margin-top: 0.5rem; }
+}
+.hero-divider { width: 60px; height: 3px; background: var(--gradient); margin: 0.75rem auto; border-radius: 2px; }
+.speakers-page { background: var(--dark-2); }
+.speakers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.speaker-card { padding: 1.75rem; }
+.card-top { display: flex; gap: 1.25rem; align-items: flex-start; margin-bottom: 1rem; }
+.avatar {
+  width: 70px; height: 70px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Orbitron', monospace; font-size: 1.5rem; font-weight: 900; color: #fff;
+  box-shadow: 0 0 16px rgba(0,212,255,0.25);
+}
+.speaker-meta {
+  h3 { font-family: 'Orbitron', monospace; font-size: 0.95rem; color: #fff; margin-bottom: 0.25rem; }
+  .desig { color: var(--accent); font-size: 0.8rem; font-family: 'Inter', sans-serif; }
+  .org { color: var(--text-muted); font-size: 0.8rem; font-family: 'Inter', sans-serif; }
+}
+.bio { color: var(--text-muted); font-size: 0.875rem; font-family: 'Inter', sans-serif; line-height: 1.7; margin-bottom: 1.25rem; }
+.card-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.tba-notice {
+  display: flex; align-items: center; gap: 1.5rem; padding: 1.75rem 2rem; margin-top: 1.5rem;
+  .tba-icon { font-size: 2.5rem; }
+  h3 { font-family: 'Orbitron', monospace; font-size: 0.95rem; margin-bottom: 0.4rem; }
+  p { color: var(--text-muted); font-size: 0.875rem; font-family: 'Inter', sans-serif; }
+}

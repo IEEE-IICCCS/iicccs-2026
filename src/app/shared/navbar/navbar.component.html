@@ -1,0 +1,25 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="nav-container">
+    <a class="nav-brand" routerLink="/" (click)="closeMenu()">
+      <div class="ieee-badge">IEEE</div>
+      <div class="brand-text">
+        <span class="conf-name">IICCCS-2026</span>
+        <span class="conf-sub">IEEE Conference</span>
+      </div>
+    </a>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen()">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" [class.open]="menuOpen()">
+      @for (link of navLinks; track link.path) {
+        <li>
+          <a [routerLink]="link.path" routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: link.path === '/'}"
+             (click)="closeMenu()">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+</nav>

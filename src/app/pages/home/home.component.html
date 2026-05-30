@@ -1,0 +1,178 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="particles">
+    @for (p of [1,2,3,4,5,6,7,8]; track p) {
+      <div class="particle" [style.animation-delay]="(p * 0.7) + 's'"></div>
+    }
+  </div>
+  <div class="hero-content">
+    <div class="badge-row">
+      <span class="ieee-logo-badge">IEEE</span>
+      <span class="conf-id-badge">Conference ID: 61609</span>
+    </div>
+    <p class="org-by">Organized by · Dept. of Electronics & Communication Engineering</p>
+    <h1 class="main-title">IEEE International Conference on<br>Communication, Computing<br>&amp; Signal Processing</h1>
+    <div class="conf-acronym">IICCCS-2026</div>
+    <div class="conf-date">
+      <span class="date-icon">📅</span>
+      <span>20 – 21 November 2026</span>
+      <span class="divider">·</span>
+      <span>Asansol Engineering College, West Bengal</span>
+    </div>
+    <div class="hero-actions">
+      <a routerLink="/call-for-papers" class="btn-primary">Submit Paper</a>
+      <a routerLink="/registration" class="btn-outline">Register Now</a>
+    </div>
+    <div class="xplore-notice">
+      <span class="xplore-icon">⚡</span>
+      Accepted papers will be submitted for inclusion into <strong>IEEE Xplore</strong> subject to meeting scope and quality requirements.
+    </div>
+  </div>
+  <!-- Countdown -->
+  <div class="countdown-bar">
+    <div class="countdown-label">Conference Begins In</div>
+    <div class="countdown-units">
+      <div class="unit"><span class="val">{{ pad(countdown.days) }}</span><span class="lbl">Days</span></div>
+      <div class="sep">:</div>
+      <div class="unit"><span class="val">{{ pad(countdown.hours) }}</span><span class="lbl">Hours</span></div>
+      <div class="sep">:</div>
+      <div class="unit"><span class="val">{{ pad(countdown.minutes) }}</span><span class="lbl">Mins</span></div>
+      <div class="sep">:</div>
+      <div class="unit"><span class="val">{{ pad(countdown.seconds) }}</span><span class="lbl">Secs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CO-SPONSORS -->
+<section class="sponsors-section">
+  <div class="container">
+    <p class="sponsors-label">Technically Co-Sponsored By</p>
+    <div class="sponsors-grid">
+      @for (s of sponsors; track s) {
+        <div class="sponsor-card glass-card">
+          <div class="sponsor-icon">IEEE</div>
+          <span>{{ s }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      @for (stat of stats; track stat.label) {
+        <div class="stat-card">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- IMPORTANT DATES -->
+<section class="dates-section">
+  <div class="container">
+    <h2 class="section-title">Important Dates</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">Mark your calendar for these critical deadlines</p>
+    <div class="dates-grid">
+      <div class="date-card glass-card">
+        <div class="date-icon">📝</div>
+        <div class="date-info">
+          <h4>Paper Submission</h4>
+          <p>31 August 2026</p>
+        </div>
+      </div>
+      <div class="date-card glass-card">
+        <div class="date-icon">🔔</div>
+        <div class="date-info">
+          <h4>Acceptance Notification</h4>
+          <p>30 September 2026</p>
+        </div>
+      </div>
+      <div class="date-card glass-card">
+        <div class="date-icon">📄</div>
+        <div class="date-info">
+          <h4>Camera Ready</h4>
+          <p>20 October 2026</p>
+        </div>
+      </div>
+      <div class="date-card glass-card">
+        <div class="date-icon">💳</div>
+        <div class="date-info">
+          <h4>Registration Deadline</h4>
+          <p>31 October 2026</p>
+        </div>
+      </div>
+      <div class="date-card glass-card highlight">
+        <div class="date-icon">🎓</div>
+        <div class="date-info">
+          <h4>Conference Dates</h4>
+          <p>20–21 November 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS PREVIEW -->
+<section class="speakers-section">
+  <div class="container">
+    <h2 class="section-title">Keynote Speakers</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">Distinguished experts from academia and industry</p>
+    <div class="speakers-grid">
+      @for (sp of speakers; track sp.id) {
+        <div class="speaker-card glass-card">
+          <div class="speaker-avatar">
+            <div class="avatar-placeholder">{{ sp.name[0] }}</div>
+          </div>
+          <div class="speaker-info">
+            <h3>{{ sp.name }}</h3>
+            <p class="designation">{{ sp.designation }}</p>
+            <p class="org">{{ sp.organization }}</p>
+            <p class="bio">{{ sp.bio }}</p>
+          </div>
+          <div class="speaker-actions">
+            <a routerLink="/speakers" class="btn-outline">View Details</a>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="view-all-wrap">
+      <a routerLink="/speakers" class="btn-primary">View All Speakers</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title" style="text-align:left">About the Conference</h2>
+        <div class="section-divider" style="margin:0.75rem 0 1.5rem"></div>
+        <p>IICCCS-2026 seeks to unite researchers, scholars, and experts across engineering and sciences, fostering interaction between theoretical, experimental, and applied communities.</p>
+        <p>Topics for paper submission include emerging areas in Communication Systems, Signal Processing, Computing, VLSI Design, Antenna Engineering, and related disciplines.</p>
+        <div class="about-actions">
+          <a routerLink="/call-for-papers" class="btn-primary">Explore Tracks</a>
+          <a routerLink="/author-guidelines" class="btn-outline">Author Guidelines</a>
+        </div>
+      </div>
+      <div class="about-venue">
+        <div class="venue-card glass-card">
+          <h4>Venue</h4>
+          <div class="venue-img">
+            <img src="assets/images/campus.jpg" alt="AEC Campus" loading="lazy"/>
+          </div>
+          <p class="venue-name">Asansol Engineering College</p>
+          <p class="venue-addr">Kanyapur, Asansol – 713305<br>West Bengal, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

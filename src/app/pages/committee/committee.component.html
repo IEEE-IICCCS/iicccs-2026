@@ -1,0 +1,26 @@
+<div class="page-hero">
+  <h1>Conference Committee</h1>
+  <div class="hero-divider"></div>
+  <p>Esteemed members guiding IICCCS-2026</p>
+</div>
+<section class="committee-page">
+  <div class="container">
+    @for (sec of sections; track sec.title) {
+      <div class="committee-section">
+        <h2 class="sec-title">{{ sec.title }}</h2>
+        <div class="members-grid">
+          @for (m of sec.members; track m.name) {
+            <div class="member-card glass-card">
+              <div class="member-avatar">{{ m.name[0] }}</div>
+              <div class="member-info">
+                <h4>{{ m.name }}</h4>
+                @if (m.designation) { <p class="desig">{{ m.designation }}</p> }
+                @if (m.organization) { <p class="org">{{ m.organization }}</p> }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>
