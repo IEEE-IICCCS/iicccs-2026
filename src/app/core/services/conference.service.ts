@@ -1,55 +1,489 @@
 import { Injectable } from '@angular/core';
-import { Speaker, CommitteeSection, Track } from '../../models/conference.models';
+import {
+  Speaker,
+  CommitteeSection,
+  Track,
+} from '../../models/conference.models';
 
 @Injectable({ providedIn: 'root' })
 export class ConferenceService {
-
   getSpeakers(): Speaker[] {
-    return [
-      { id: 1, name: 'Prof. Bhaskar Gupta', designation: 'Professor', organization: 'University of Calcutta', bio: 'Renowned researcher in microwave engineering and antenna systems with 30+ years of academic excellence.', image: 'assets/images/speaker1.jpg', linkedin: '#' },
-      { id: 2, name: 'Dr. Ananda Sankar Chakrabarti', designation: 'Senior Scientist', organization: 'ISRO, Ahmedabad', bio: 'Expert in signal processing and satellite communication systems, leading various national space missions.', image: 'assets/images/speaker2.jpg', linkedin: '#' },
-      { id: 3, name: 'Prof. Partha Pratim Sarkar', designation: 'Professor & Head', organization: 'Jadavpur University', bio: 'Specialist in computational electromagnetics, published over 150 research papers in IEEE journals.', image: 'assets/images/speaker3.jpg', linkedin: '#' },
-      { id: 4, name: 'Dr. Sujata Sengupta', designation: 'Associate Professor', organization: 'NIT Durgapur', bio: 'Pioneer in wireless communication and 5G/6G technologies with industry collaboration experience.', image: 'assets/images/speaker4.jpg', linkedin: '#' },
-    ];
-  }
+  return [
+    {
+      id: 1,
+      name: 'Prof. Debatosh Guha',
+      designation: 'Professor',
+      organization: 'University of Calcutta',
+      bio: 'Distinguished researcher in microwave engineering, antenna design, metamaterials, and AI-based antenna systems. Recipient of multiple national and international recognitions.',
+      image: '',
+      linkedin: 'https://in.linkedin.com/in/debatosh-guha-2b0a3615'
+    },
+    {
+      id: 2,
+      name: 'Prof. Mrinal Kanti Mandal',
+      designation: 'Professor',
+      organization: 'IIT Kharagpur',
+      bio: 'Senior IEEE member with expertise in antenna engineering, wireless communications, and interdisciplinary electromagnetic research.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/mrinal-mandal-41452055/'
+    },
+    {
+      id: 3,
+      name: 'Dr. Goutam Chattopadhyay',
+      designation: 'Senior Research Scientist',
+      organization: 'NASA Jet Propulsion Laboratory (JPL)',
+      bio: 'Accomplished researcher specializing in electrical engineering, physics, telecommunications, and space science technologies.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/goutam-chattopadhyay-b4073a7'
+    },
+    {
+      id: 4,
+      name: 'Prof. Jawad Siddiqui',
+      designation: 'Associate Professor',
+      organization: "Queen's University, Canada",
+      bio: 'Internationally recognized expert in radar systems, radio physics, and microwave engineering with extensive research contributions.',
+      image: '',
+      linkedin: 'https://ca.linkedin.com/in/jawad-y-siddiqui-59454b65'
+    },
+    {
+      id: 5,
+      name: 'Prof. Sajal Biring',
+      designation: 'Associate Professor',
+      organization: 'Ming Chi University of Technology',
+      bio: 'Researcher in plasmonics, nano-optics, plasmonic sensors, and optoelectronic device integration.',
+      image: '',
+      linkedin: '#'
+    },
+    {
+      id: 6,
+      name: 'Prof. Sushrut Das',
+      designation: 'Associate Professor',
+      organization: 'IIT (ISM) Dhanbad',
+      bio: 'Expert in electromagnetics, wireless communications, and antenna engineering with several international recognitions.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/sushrut-das-06823677/'
+    },
+    {
+      id: 7,
+      name: 'Dr. Goutam Kumar Dalapati',
+      designation: 'CEO',
+      organization: 'SunKonnect Pte Ltd, Singapore',
+      bio: 'Specialist in renewable energy technologies, semiconductor devices, and advanced materials research.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/goutam-kumar-dalapati-4416a3170'
+    },
+    {
+      id: 8,
+      name: 'Prof. Sujit Kumar Mandal',
+      designation: 'Professor',
+      organization: 'NIT Durgapur',
+      bio: 'Researcher in photonic networks, optical communication systems, and communication engineering technologies.',
+      image: '',
+      linkedin: '#'
+    },
+    {
+      id: 9,
+      name: 'Prof. Rowdra Ghatak',
+      designation: 'Professor',
+      organization: 'NIT Durgapur',
+      bio: 'Leading academic in RFIDs, antennas, computational electromagnetics, and microwave engineering.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/rowdra-ghatak-3891b287/'
+    },
+    {
+      id: 10,
+      name: 'Dr. Chinmoy Saha',
+      designation: 'Professor',
+      organization: 'IIST',
+      bio: 'Renowned researcher in avionics, wireless power transfer, microwave circuits, and advanced antenna systems.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/dr-chinmoy-saha-7129a9192/'
+    },
+    {
+      id: 11,
+      name: 'Prof. Somak Bhattacharyya',
+      designation: 'Associate Professor',
+      organization: 'IIT (BHU) Varanasi',
+      bio: 'Award-winning scientist with contributions to radio science, antennas, and electromagnetic applications.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/somak-bhattacharyya-735726182/'
+    },
+    {
+      id: 12,
+      name: 'Dr. Sumanta Gupta',
+      designation: 'Associate Professor',
+      organization: 'IIT Patna',
+      bio: 'Researcher in optical communications, photonic networking, and communication engineering systems.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/dr-sumanta-gupta-23b4b3a/'
+    },
+    {
+      id: 13,
+      name: 'Dr. Shih-Hsin Chang',
+      designation: 'Director',
+      organization: 'MSSCORPS Co. Ltd., Taiwan',
+      bio: 'Expert in semiconductor technology, materials characterization, electron microscopy, and failure analysis.',
+      image: '',
+      linkedin: '#'
+    },
+    {
+      id: 14,
+      name: 'Dr. Debatri Chatterjee',
+      designation: 'Senior Scientist',
+      organization: 'TCS Research',
+      bio: 'Research scientist specializing in physiological signal processing, AI, and human cognition analysis.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/dr-debatri-chatterjee-4a327819/'
+    },
+    {
+      id: 15,
+      name: 'Prof. Arindam Biswas',
+      designation: 'Associate Professor',
+      organization: 'Kazi Nazrul University',
+      bio: 'Researcher in IoT, Machine Learning, Deep Learning, and computational intelligence systems.',
+      image: '',
+      linkedin: 'https://www.linkedin.com/in/dr-arindam-biswas-3a727145'
+    }
+  ];
+}
 
   getCommittee(): CommitteeSection[] {
-    return [
-      { title: 'Chief Patron', members: [{ name: 'Sri Bikash Singh', designation: 'Chairman', organization: 'AEC Governing Body' }] },
-      { title: 'Patrons', members: [
-        { name: 'Dr. Sujoy Bhattacharya', designation: 'Principal', organization: 'Asansol Engineering College' },
-        { name: 'Prof. Debabrata Ghosh', designation: 'Vice Principal', organization: 'Asansol Engineering College' }
-      ]},
-      { title: 'Conference Chairs', members: [
-        { name: 'Prof. Chittajit Sarkar', designation: 'HOD, ECE Department' },
-        { name: 'Prof. Chiranjib Goswami', designation: 'Associate Professor, ECE' },
-        { name: 'Prof. Sumanta Karmakar', designation: 'Assistant Professor, ECE' }
-      ]},
-      { title: 'Technical Program Committee', members: [
-        { name: 'Prof. Anupam Karmakar', organization: 'NIT Durgapur' },
-        { name: 'Dr. Biswajit Mahanty', organization: 'IIT Kharagpur' },
-        { name: 'Prof. Soumik Das', organization: 'IIEST Shibpur' },
-        { name: 'Dr. Rabindra Kumar Mishra', organization: 'University of Burdwan' },
-      ]},
-      { title: 'Advisory Committee', members: [
-        { name: 'Prof. Tapas Kumar Bhattacharya', organization: 'IIT Kharagpur' },
-        { name: 'Prof. Bhaskar Gupta', organization: 'University of Calcutta' },
-        { name: 'Dr. K. Mridula', organization: 'CUSAT, Kerala' },
-      ]},
-      { title: 'Organizing Committee', members: [
-        { name: 'Prof. Subrata Roy' }, { name: 'Prof. Mainak Banerjee' },
-        { name: 'Prof. Sourav Das' }, { name: 'Prof. Amrita Chakraborty' },
-        { name: 'Prof. Tanmoy Chakraborty' }, { name: 'Prof. Arpita Ghosh' },
-      ]}
-    ];
-  }
+  return [
+    {
+      title: 'Chief Patron',
+      members: [
+        {
+          name: 'Sardar Taranjit Singh',
+          designation: 'MD',
+          organization: 'JIS Group',
+        },
+        {
+          name: 'Mr. Tapan Kumar Ghosh',
+          designation: 'Director',
+          organization: 'AEC',
+        },
+      ],
+    },
+    {
+      title: 'Patrons',
+      members: [
+        {
+          name: 'Mr. Simarpreet Singh',
+          designation: 'Director',
+          organization: 'JIS Group',
+        },
+        {
+          name: 'Mr. Shankar Biswas',
+          designation: 'Joint Director',
+          organization: 'JIS Group',
+        },
+        {
+          name: 'Dr. Arup Bhaumik',
+          designation: 'Principal',
+          organization: 'Asansol Engineering College',
+        },
+        {
+          name: 'Dr. Debashis Sarkar',
+          designation: 'Registrar',
+          organization: 'Asansol Engineering College',
+        },
+      ],
+    },
+    {
+      title: 'International Advisory Committee',
+      members: [
+        {
+          name: 'Dr. Goutam Chattopadhyay',
+          organization: 'NASA Jet Propulsion Lab, USA',
+        },
+        {
+          name: 'Prof. Yahia M. Antar',
+          organization: 'Royal Military College of Canada',
+        },
+        {
+          name: 'Dr. Ajay K. Poddar',
+          organization: 'Synergy Microwave Corporation, Paterson, USA',
+        },
+        {
+          name: "Prof. Jawad Siddiqui",
+          organization: "Queen's University, Kingston, Canada",
+        },
+        {
+          name: 'Prof. Sajal Biring',
+          organization: 'Ming Chi University, Taiwan',
+        },
+        {
+          name: 'Prof. Chia-Hao Ku',
+          organization: 'Ming Chi University, Taiwan',
+        },
+        {
+          name: 'Prof. Kai Chen',
+          organization: 'Victoria University of Wellington, New Zealand',
+        },
+        {
+          name: 'Prof. Shital Das',
+          designation: 'Technology Lead',
+          organization: 'Fortum Power and Heat Oy, Finland',
+        },
+        {
+          name: 'Dr. Kiran Sankar Maiti',
+          organization: 'Max-Planck-Institute, Germany',
+        },
+        {
+          name: 'Dr. Susmita Roy',
+          organization: 'Technical University of Munich, Germany',
+        },
+        {
+          name: 'Dr. Goutam Kumar Dalapati',
+          designation: 'CEO',
+          organization: 'Sunkonnect Pte Ltd, Singapore',
+        },
+      ],
+    },
+    {
+      title: 'National Advisory Committee',
+      members: [
+        {
+          name: 'Prof. Ajoy Kumar Ray',
+          designation: 'Padma Shri, Director',
+          organization: 'JISIASR',
+        },
+        {
+          name: 'Prof. Debatosh Guha',
+          designation: 'IRPE',
+          organization: 'Calcutta University',
+        },
+        {
+          name: 'Prof. Nikhil Ranjan Das',
+          designation: 'IRPE',
+          organization: 'Calcutta University',
+        },
+        {
+          name: 'Prof. Bhaskar Gupta',
+          organization: 'Jadavpur University',
+        },
+        {
+          name: 'Prof. Suparna Kar Chowdhury',
+          organization: 'Jadavpur University',
+        },
+        {
+          name: 'Prof. Susanta Parui',
+          organization: 'IIEST, Shibpur',
+        },
+        {
+          name: 'Prof. Sushrut Das',
+          organization: 'IIT (ISM) Dhanbad',
+        },
+        {
+          name: 'Prof. Ashudev Dutta',
+          organization: 'IIT Hyderabad',
+        },
+        {
+          name: 'Prof. Sumanta Gupta',
+          organization: 'IIT Patna',
+        },
+        {
+          name: 'Prof. Kaushik Mitra',
+          organization: 'IIT Chennai',
+        },
+        {
+          name: 'Prof. Chinmoy Saha',
+          designation: 'Dept. Avionics',
+          organization: 'IIST',
+        },
+        {
+          name: 'Dr. Chandrakanta Kumar',
+          organization: 'ISRO Satellite Centre',
+        },
+        {
+          name: 'Dr. Tirtha Pratim Das',
+          organization: 'ISRO Headquarters, Bengaluru',
+        },
+        {
+          name: 'Prof. Somak Bhattacharyya',
+          organization: 'IIT BHU',
+        },
+        {
+          name: 'Dr. Satyajit Chakraborty',
+          organization: 'SAMEER Kolkata',
+        },
+        {
+          name: 'Prof. Bhola Nath Pal',
+          organization: 'IIT BHU',
+        },
+        {
+          name: 'Prof. Pradip Paik',
+          organization: 'IIT BHU',
+        },
+        {
+          name: 'Prof. Debdeep Sarkar',
+          organization: 'IISc Bangalore',
+        },
+        {
+          name: 'Prof. Monotosh Biswas',
+          organization: 'Jadavpur University',
+        },
+        {
+          name: 'Prof. Rowdra Ghatak',
+          organization: 'NIT Durgapur',
+        },
+        {
+          name: 'Prof. A.K Bhattacharjee',
+          organization: 'NIT Durgapur',
+        },
+        {
+          name: 'Prof. Sujit Kr. Mandal',
+          organization: 'NIT Durgapur',
+        },
+        {
+          name: 'Prof. Arindam Biswas',
+          organization: 'Kazi Nazrul University',
+        },
+        {
+          name: 'Dr. Debatri Chatterjee',
+          designation: 'Senior Scientist',
+          organization: 'TCS Research, TSC',
+        },
+        {
+          name: 'Prof. Susanta Ray',
+          organization: 'Jadavpur University',
+        },
+        {
+          name: 'Prof. Jadav Chandra Das',
+          organization: 'MAKAUT',
+        },
+        {
+          name: 'Prof. Atanu Kundu',
+          organization: 'HIT Kolkata',
+        },
+        {
+          name: 'Prof. Tridibesh Nag',
+          organization: 'NSEC, Kolkata',
+        },
+        {
+          name: 'Prof. Koushik Dutta',
+          organization: 'NSEC, Kolkata',
+        },
+      ],
+    },
+    {
+      title: 'Technical Program Chair',
+      members: [
+        {
+          name: 'Dr. Chiranjib Goswami',
+          designation: 'ECE',
+          organization: 'Asansol Engineering College',
+        },
+        {
+          name: 'Dr. Ashmi Chakraborty',
+          designation: 'ECE',
+          organization: 'Asansol Engineering College',
+        },
+      ],
+    },
+    {
+      title: 'Publication Chair',
+      members: [
+        {
+          name: 'Prof. S. Mukhopadhyay',
+          organization: 'IIT KGP',
+        },
+      ],
+    },
+    {
+      title: 'Technical Program Committee',
+      members: [
+        { name: 'Prof. Prajit Paul', organization: 'AEC' },
+        { name: 'Prof. Khushi Banerjee', organization: 'AEC' },
+        { name: 'Prof. Soumen Sen', organization: 'AEC' },
+        { name: 'Prof. Rupam Das', organization: 'AEC' },
+        { name: 'Prof. Sujit Goswami', organization: 'AEC' },
+        { name: 'Prof. Sumanta Karmakar', organization: 'AEC' },
+        { name: 'Prof. Shiv Charan Puri', organization: 'AEC' },
+        { name: 'Prof. Intekhab Hussain', organization: 'AEC' },
+        { name: 'Prof. Saswata Chakraborty', organization: 'AEC' },
+        { name: 'Prof. Biplab Bhowmick', organization: 'AEC' },
+        { name: 'Prof. Swati Bhattacharjee', organization: 'AEC' },
+        { name: 'Prof. Gurjeet Singh', organization: 'AEC' },
+        { name: 'Prof. Sumitra Bhattacharyya', organization: 'AEC' },
+        { name: 'Prof. Jay Bandapadhyay', organization: 'AEC' },
+        { name: 'Prof. Karuna Nandi', organization: 'AEC' },
+        { name: 'Prof. Subhamay Bhattacharyya', organization: 'AEC' },
+      ],
+    },
+  ];
+}
 
   getTracks(): Track[] {
-    return [
-      { title: 'Communication Systems', icon: '📡', topics: ['5G/6G Networks', 'Satellite Communication', 'Optical Fiber', 'Wireless Sensor Networks', 'IoT Protocols', 'MIMO Systems'] },
-      { title: 'Signal Processing', icon: '📊', topics: ['Image & Video Processing', 'Speech Processing', 'Biomedical Signals', 'Machine Learning for SP', 'Radar Signal Processing', 'Deep Learning'] },
-      { title: 'Computing & AI', icon: '🖥️', topics: ['Edge Computing', 'Cloud Architecture', 'AI/ML Applications', 'Quantum Computing', 'Embedded Systems', 'VLSI Design'] },
-      { title: 'Antenna & Microwave', icon: '🔭', topics: ['Microstrip Antennas', 'Phased Arrays', 'Metamaterials', 'RF Circuit Design', 'EMC & EMI', 'Reconfigurable Antennas'] },
-    ];
-  }
+  return [
+    {
+      title: 'Communication Track',
+      icon: '📡',
+      topics: [
+        'Communication Theory',
+        'Information Theory & Coding',
+        'Wireless Mobile & Vehicular Communication & Satellite Communication',
+        'Telecommunication Networks',
+        'Cooperative, Device to Device and Multi-hop Communication',
+        'Green Communication',
+        'Cognitive Radio, Optical Communications & Networks',
+        'MIMO, Massive MIMO and Cloud RAN',
+        'Channel Modelling Characterization and Estimation',
+        'Modulation, Coding Diversity, Equalization, and Synchronization',
+        'Smart Grid Communication & IoT Networks',
+        'Antenna Theory & Technique',
+        'Microwave Filters, Oscillator and Amplifiers',
+        'Terahertz System, RF Nanotechnology',
+        'Metamaterials & Bio-Electromagnetics',
+        'EBG, FSS Applications in Antenna and Microwave',
+        'Microwave Imaging and Diagnostics',
+        'RF Antennas for Space Technology',
+      ],
+    },
+    {
+      title: 'Computing Track',
+      icon: '🖥️',
+      topics: [
+        'Linear and Nonlinear Optimization',
+        'Combinatorial Optimization',
+        'Stochastic Optimization',
+        'Dynamic Optimization',
+        'Fuzzy Optimization',
+        'Optimal Control Theory',
+        'Multi-objective Optimization',
+        'Evolutionary and Bio-inspired Optimization',
+        'Intelligent Information and Technology',
+        'Supply Chain and Inventory Control',
+        'Game Theory',
+        'Image Processing',
+        'Green Computing',
+        'Ubiquitous Computing and Application Cloud Computing',
+        'Internet of Things (IoT)',
+      ],
+    },
+    {
+      title: 'Device and Signal Processing Track',
+      icon: '📊',
+      topics: [
+        'Image & Video Signal Processing & Medical Imaging',
+        'DSP Algorithms & Architectures',
+        'Pattern Analysis & Classification',
+        'Large Dimensional Signal Processing',
+        'Compressive Sensing',
+        'Statistical Signal Processing',
+        'Signal Processing for Big Data & Adaptive Signal Processing',
+        'Biomedical/Genomic Signal & Image Processing, Geophysical / Radar / Sonar / Optical / Smart Sensor Signal Processing',
+        'Analog/Digital and Mixed Signal Circuits and Systems',
+        'Low Power Circuits and Systems, MEMS Device Technology, Modelling and Simulation',
+        'Devices and Circuits for RF Communication',
+        'VLSI for Biomedical Signal Processing',
+        'Microwave Filters, Oscillator and Amplifiers',
+        'Terahertz System, RF Nanotechnology',
+        'EBG, FSS Applications in Antenna and Microwave',
+        'Microwave Imaging and Diagnostics',
+        'RF Antennas for Space Technology',
+      ],
+    },
+  ];
+}
 }
