@@ -19,10 +19,10 @@ export class ConferenceService {
       linkedin: 'https://in.linkedin.com/in/debatosh-guha-2b0a3615'
     },
     {
-      id: 2,
-      name: 'Prof. Mrinal Kanti Mandal',
-      designation: 'Professor',
-      organization: 'IIT Kharagpur',
+      id: 3,
+      name: 'Prof. Chittajit Sarkar',
+      designation: 'Principal',
+      organization: 'Islampur College',
       bio: 'Senior IEEE member with expertise in antenna engineering, wireless communications, and interdisciplinary electromagnetic research.',
       image: '',
       linkedin: 'https://www.linkedin.com/in/mrinal-mandal-41452055/'

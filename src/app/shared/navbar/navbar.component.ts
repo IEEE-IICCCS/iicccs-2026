@@ -21,6 +21,7 @@ export class NavbarComponent {
     { label: 'Call for Papers', path: '/call-for-papers' },
     { label: 'Speakers', path: '/speakers' },
     { label: 'Contact', path: '/contact' },
+    { label: 'CMT Acknowledgment', path: '/cmt-acknowledgement'},
   ];
 
   @HostListener('window:scroll')

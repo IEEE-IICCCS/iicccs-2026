@@ -1,0 +1,19 @@
+.page-hero {
+  background: linear-gradient(135deg, #0d3d78 0%, #1a5fad 100%);
+  padding: 8rem 1.5rem 3.5rem; text-align: center; border-bottom: 1px solid var(--glass-border);
+  h1 { font-family: 'Orbitron', monospace; font-size: clamp(1.5rem,3vw,2.2rem); color: #fff; }
+  p { color: rgba(255,255,255,0.75); font-family: 'Inter', sans-serif; margin-top: 0.5rem; }
+}
+.notice-card {
+  display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.5rem; margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, rgba(26,95,173,0.05), rgba(26,95,173,0.08));
+  border-color: rgba(26,95,173,0.25);
+  p { color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 0.875rem; strong { color: var(--primary); } }
+}
+.container{
+      max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    margin-top: 8rem;
+}
+.hero-divider { width: 60px; height: 3px; background: rgba(255,255,255,0.5); margin: 0.75rem auto; border-radius: 2px; }
