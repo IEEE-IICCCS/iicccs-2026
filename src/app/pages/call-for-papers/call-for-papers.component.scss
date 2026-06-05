@@ -60,3 +60,13 @@
     }
   }
 }
+.submission-info a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.submission-info a:hover {
+  text-decoration: underline;
+}
