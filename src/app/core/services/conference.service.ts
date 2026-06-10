@@ -149,269 +149,182 @@ export class ConferenceService {
 
   getCommittee(): CommitteeSection[] {
   return [
-    {
-      title: 'Chief Patron',
-      members: [
-        {
-          name: 'Sardar Taranjit Singh',
-          designation: 'MD',
-          organization: 'JIS Group',
-        },
-        {
-          name: 'Mr. Tapan Kumar Ghosh',
-          designation: 'Director',
-          organization: 'AEC',
-        },
-      ],
-    },
-    {
-      title: 'Patrons',
-      members: [
-        {
-          name: 'Mr. Simarpreet Singh',
-          designation: 'Director',
-          organization: 'JIS Group',
-        },
-        {
-          name: 'Mr. Shankar Biswas',
-          designation: 'Joint Director',
-          organization: 'JIS Group',
-        },
-        {
-          name: 'Dr. Arup Bhaumik',
-          designation: 'Principal',
-          organization: 'Asansol Engineering College',
-        },
-        {
-          name: 'Dr. Debashis Sarkar',
-          designation: 'Registrar',
-          organization: 'Asansol Engineering College',
-        },
-      ],
-    },
-    {
-      title: 'International Advisory Committee',
-      members: [
-        {
-          name: 'Dr. Goutam Chattopadhyay',
-          organization: 'NASA Jet Propulsion Lab, USA',
-        },
-        {
-          name: 'Prof. Yahia M. Antar',
-          organization: 'Royal Military College of Canada',
-        },
-        {
-          name: 'Dr. Ajay K. Poddar',
-          organization: 'Synergy Microwave Corporation, Paterson, USA',
-        },
-        {
-          name: "Prof. Jawad Siddiqui",
-          organization: "Queen's University, Kingston, Canada",
-        },
-        {
-          name: 'Prof. Sajal Biring',
-          organization: 'Ming Chi University, Taiwan',
-        },
-        {
-          name: 'Prof. Chia-Hao Ku',
-          organization: 'Ming Chi University, Taiwan',
-        },
-        {
-          name: 'Prof. Kai Chen',
-          organization: 'Victoria University of Wellington, New Zealand',
-        },
-        {
-          name: 'Prof. Shital Das',
-          designation: 'Technology Lead',
-          organization: 'Fortum Power and Heat Oy, Finland',
-        },
-        {
-          name: 'Dr. Kiran Sankar Maiti',
-          organization: 'Max-Planck-Institute, Germany',
-        },
-        {
-          name: 'Dr. Susmita Roy',
-          organization: 'Technical University of Munich, Germany',
-        },
-        {
-          name: 'Dr. Goutam Kumar Dalapati',
-          designation: 'CEO',
-          organization: 'Sunkonnect Pte Ltd, Singapore',
-        },
-      ],
-    },
-    {
-      title: 'National Advisory Committee',
-      members: [
-        {
-          name: 'Prof. Ajoy Kumar Ray',
-          designation: 'Padma Shri, Director',
-          organization: 'JISIASR',
-        },
-        {
-          name: 'Prof. Debatosh Guha',
-          designation: 'IRPE',
-          organization: 'Calcutta University',
-        },
-        {
-          name: 'Prof. Nikhil Ranjan Das',
-          designation: 'IRPE',
-          organization: 'Calcutta University',
-        },
-        {
-          name: 'Prof. Bhaskar Gupta',
-          organization: 'Jadavpur University',
-        },
-        {
-          name: 'Prof. Suparna Kar Chowdhury',
-          organization: 'Jadavpur University',
-        },
-        {
-          name: 'Prof. Susanta Parui',
-          organization: 'IIEST, Shibpur',
-        },
-        {
-          name: 'Prof. Sushrut Das',
-          organization: 'IIT (ISM) Dhanbad',
-        },
-        {
-          name: 'Prof. Ashudev Dutta',
-          organization: 'IIT Hyderabad',
-        },
-        {
-          name: 'Prof. Sumanta Gupta',
-          organization: 'IIT Patna',
-        },
-        {
-          name: 'Prof. Kaushik Mitra',
-          organization: 'IIT Chennai',
-        },
-        {
-          name: 'Prof. Chinmoy Saha',
-          designation: 'Dept. Avionics',
-          organization: 'IIST',
-        },
-        {
-          name: 'Dr. Chandrakanta Kumar',
-          organization: 'ISRO Satellite Centre',
-        },
-        {
-          name: 'Dr. Tirtha Pratim Das',
-          organization: 'ISRO Headquarters, Bengaluru',
-        },
-        {
-          name: 'Prof. Somak Bhattacharyya',
-          organization: 'IIT BHU',
-        },
-        {
-          name: 'Dr. Satyajit Chakraborty',
-          organization: 'SAMEER Kolkata',
-        },
-        {
-          name: 'Prof. Bhola Nath Pal',
-          organization: 'IIT BHU',
-        },
-        {
-          name: 'Prof. Pradip Paik',
-          organization: 'IIT BHU',
-        },
-        {
-          name: 'Prof. Debdeep Sarkar',
-          organization: 'IISc Bangalore',
-        },
-        {
-          name: 'Prof. Monotosh Biswas',
-          organization: 'Jadavpur University',
-        },
-        {
-          name: 'Prof. Rowdra Ghatak',
-          organization: 'NIT Durgapur',
-        },
-        {
-          name: 'Prof. A.K Bhattacharjee',
-          organization: 'NIT Durgapur',
-        },
-        {
-          name: 'Prof. Sujit Kr. Mandal',
-          organization: 'NIT Durgapur',
-        },
-        {
-          name: 'Prof. Arindam Biswas',
-          organization: 'Kazi Nazrul University',
-        },
-        {
-          name: 'Dr. Debatri Chatterjee',
-          designation: 'Senior Scientist',
-          organization: 'TCS Research, TSC',
-        },
-        {
-          name: 'Prof. Susanta Ray',
-          organization: 'Jadavpur University',
-        },
-        {
-          name: 'Prof. Jadav Chandra Das',
-          organization: 'MAKAUT',
-        },
-        {
-          name: 'Prof. Atanu Kundu',
-          organization: 'HIT Kolkata',
-        },
-        {
-          name: 'Prof. Tridibesh Nag',
-          organization: 'NSEC, Kolkata',
-        },
-        {
-          name: 'Prof. Koushik Dutta',
-          organization: 'NSEC, Kolkata',
-        },
-      ],
-    },
-    {
-      title: 'Technical Program Chair',
-      members: [
-        {
-          name: 'Dr. Chiranjib Goswami',
-          designation: 'ECE',
-          organization: 'Asansol Engineering College',
-        },
-        {
-          name: 'Dr. Ashmi Chakraborty',
-          designation: 'ECE',
-          organization: 'Asansol Engineering College',
-        },
-      ],
-    },
-    {
-      title: 'Publication Chair',
-      members: [
-        {
-          name: 'Prof. S. Mukhopadhyay',
-          organization: 'IIT KGP',
-        },
-      ],
-    },
-    {
-      title: 'Technical Program Committee',
-      members: [
-        { name: 'Prof. Prajit Paul', organization: 'AEC' },
-        { name: 'Prof. Khushi Banerjee', organization: 'AEC' },
-        { name: 'Prof. Soumen Sen', organization: 'AEC' },
-        { name: 'Prof. Rupam Das', organization: 'AEC' },
-        { name: 'Prof. Sujit Goswami', organization: 'AEC' },
-        { name: 'Prof. Sumanta Karmakar', organization: 'AEC' },
-        { name: 'Prof. Shiv Charan Puri', organization: 'AEC' },
-        { name: 'Prof. Intekhab Hussain', organization: 'AEC' },
-        { name: 'Prof. Saswata Chakraborty', organization: 'AEC' },
-        { name: 'Prof. Biplab Bhowmick', organization: 'AEC' },
-        { name: 'Prof. Swati Bhattacharjee', organization: 'AEC' },
-        { name: 'Prof. Gurjeet Singh', organization: 'AEC' },
-        { name: 'Prof. Sumitra Bhattacharyya', organization: 'AEC' },
-        { name: 'Prof. Jay Bandapadhyay', organization: 'AEC' },
-        { name: 'Prof. Karuna Nandi', organization: 'AEC' },
-        { name: 'Prof. Subhamay Bhattacharyya', organization: 'AEC' },
-      ],
-    },
-  ];
+  {
+    title: 'Chief Patron',
+    members: [
+      {
+        name: 'Sardar Taranjit Singh',
+        designation: 'MD',
+        organization: 'JIS Group',
+      },
+      {
+        name: 'Mr. Tapan Kumar Ghosh',
+        designation: 'Director',
+        organization: 'AEC',
+      },
+    ],
+  },
+  {
+    title: 'Patron',
+    members: [
+      {
+        name: 'Mr. Simarpreet Singh',
+        designation: 'Director',
+        organization: 'JIS Group',
+      },
+      {
+        name: 'Mr. Shankar Biswas',
+        designation: 'Joint Director',
+        organization: 'JIS Group',
+      },
+      {
+        name: 'Prof. Arup Kumar Bhowmick',
+        designation: 'Principal',
+        organization: 'AEC',
+      },
+      {
+        name: 'Prof. Debasis Sarkar',
+        designation: 'Registrar',
+        organization: 'AEC',
+      },
+    ],
+  },
+  {
+    title: 'Program Chair',
+    members: [
+      {
+        name: 'Prof. Chiranjib Goswami',
+        organization: 'AEC',
+      },
+      {
+        name: 'Prof. Ashmi Chakraborty',
+        organization: 'AEC',
+      },
+    ],
+  },
+  {
+    title: 'Program Co-Chair',
+    members: [
+      {
+        name: 'Prof. Prajit Paul',
+        organization: 'AEC',
+      },
+    ],
+  },
+  {
+    title: 'International Advisory Committee',
+    members: [
+      { name: 'Prof. Goutam Chattopadhyay', organization: 'NASA Jet Propulsion Lab, USA' },
+      { name: 'Prof. (Dr.) Yahia M. Antar', organization: 'Royal Military College of Canada & Queen’s University, Canada' },
+      { name: 'Prof. Ajay K. Poddar', organization: 'Synergy Microwave Corporation, Paterson, USA' },
+      { name: 'Prof. Sajal Biring', organization: 'Ming Chi University, Taiwan' },
+      { name: 'Prof. Jawad Siddiqui', organization: "Queen's University, Kingston, Canada" },
+      { name: 'Prof. Chia-Hao Ku', organization: 'Ming Chi University, Taiwan' },
+      { name: 'Prof. Kai Chen', organization: 'Victoria University of Wellington, New Zealand' },
+      { name: 'Prof. Shital Das', designation: 'Technology Lead', organization: 'Fortum Power and Heat Oy, Finland' },
+      { name: 'Prof. Kiran Sankar Maiti', organization: 'Max–Planck-Institute of Quantum Optics, Germany' },
+      { name: 'Prof. Susmita Roy', organization: 'Technical University of Munich, Germany' },
+      { name: 'Prof. Goutam Kumar Dalapati', designation: 'CEO', organization: 'Sunkonnect Pte Ltd, Singapore' },
+    ],
+  },
+  {
+    title: 'National Advisory Committee',
+    members: [
+      { name: 'Prof. Ajoy Kumar Ray', designation: 'Padmashri, Director', organization: 'JIS Institute of Advanced Studies & Research' },
+      { name: 'Prof. Debatosh Guha', designation: 'IRPE', organization: 'Calcutta University' },
+      { name: 'Prof. Chinmoy Saha', designation: 'Dept. Avionics', organization: 'IIST, Department of Space, Govt. Of India' },
+      { name: 'Prof. Chandrakanta Kumar', organization: 'ISRO Satellite Centre, Bengaluru, Karnataka' },
+      { name: 'Prof. Debangshu Dey', designation: 'Chair, MDC, IEEE-India Council Secretary, Kolkata Section' },
+      { name: 'Prof. Tridibesh Nag', designation: 'Vice-Chair, MDC, IEEE-India Council Secretary, Kolkata Section' },
+      { name: 'Prof. Bhaskar Gupta', designation: 'Vice Chancellor', organization: 'IEM' },
+      { name: 'Prof. Tirtha Pratim Das', organization: 'ISRO Headquarters, Bengaluru, India' },
+      { name: 'Prof. Ravi Kumar Gangwar', organization: 'IIT (ISM) Dhanbad' },
+      { name: 'Prof. Sushrut Das', organization: 'IIT (ISM) Dhanbad' },
+      { name: 'Prof. M. K. Mandal', organization: 'IIT KGP' },
+      { name: 'Prof. Jyotirmoy Chatterjee', designation: 'Dean (Research)', organization: 'JISIASR' },
+      { name: 'Prof. Sumanta Gupta', organization: 'IIT Patna' },
+      { name: 'Prof. Somak Bhattacharjee', organization: 'IIT BHU' },
+      { name: 'Prof. Debjani Mitra', organization: 'IIT (ISM) Dhanbad' },
+      { name: 'Prof. Subhashis Chatterjee', organization: 'IIT (ISM) Dhanbad' },
+      { name: 'Prof. Monodipan Sahu', organization: 'IIT (ISM) Dhanbad' },
+      { name: 'Prof. Satyajit Chakraborty', organization: 'SAMEER Kolkata' },
+      { name: 'Prof. Debdeep Sarkar', organization: 'IISc Bangalore, India' },
+      { name: 'Prof. Rowdra Ghatak', organization: 'NIT Durgapur' },
+      { name: 'Prof. A.K Bhattacharjee', organization: 'NIT Durgapur' },
+      { name: 'Prof. Nikhil Ranjan Das', designation: 'IRPE', organization: 'Calcutta University' },
+      { name: 'Prof. Suparna Kar Chowdhury', organization: 'Jadavpur University' },
+      { name: 'Prof. Susanta Parui', organization: 'IIEST, Shibpur' },
+      { name: 'Prof. Chittajit Sarkar', organization: 'Islampur College, WB' },
+      { name: 'Prof. Monotosh Biswas', organization: 'Jadavpur University' },
+      { name: 'Prof. Sujit Kr. Mandal', organization: 'NIT Durgapur' },
+      { name: 'Prof. Debatri Chatterjee', designation: 'Senior Scientist', organization: 'TCS Research, TSC' },
+      { name: 'Prof. Susanta Ray', organization: 'Jadavpur University' },
+      { name: 'Prof. Atanu Kundu', organization: 'HIT Kolkata' },
+      { name: 'Prof. Koushik Dutta', organization: 'NSEC, Kolkata' },
+    ],
+  },
+  {
+    title: 'Technical Program Committee',
+    members: [
+      { name: 'Prof. Monish Chatterjee', organization: 'AEC' },
+      { name: 'Prof. Abhishek Banerjee', organization: 'AEC' },
+      { name: 'Prof. Debasis Chakraborty', organization: 'AEC' },
+      { name: 'Prof. Apurba Chatterjee', organization: 'AEC' },
+      { name: 'Prof. Anup Kumar Mukhopadhyay', organization: 'AEC' },
+      { name: 'Prof. Sheuli Chakraborty', organization: 'AEC' },
+      { name: 'Prof. Abhishek Bandopadhay', organization: 'AEC' },
+      { name: 'Prof. Srijan Paul', organization: 'AEC' },
+      { name: 'Prof. Mithu Dey', organization: 'AEC' },
+      { name: 'Prof. Biplab Saha', organization: 'AEC' },
+    ],
+  },
+  {
+    title: 'Publication Chair',
+    members: [
+      { name: 'Prof. Soumen Sen', organization: 'AEC' },
+      { name: 'Prof. Khushi Banerjee', organization: 'AEC' },
+      { name: 'Prof. Rupam Das', organization: 'AEC' },
+      { name: 'Prof. Sujit Goswami', organization: 'AEC' },
+      { name: 'Prof. Saswata Chakraborty', organization: 'AEC' },
+      { name: 'Prof. Shiv Charan Puri', organization: 'AEC' },
+      { name: 'Prof. Intekhab Hussain', organization: 'AEC' },
+      { name: 'Prof. Swati Bhattacharjee', organization: 'AEC' },
+      { name: 'Prof. Biplab Bhowmick', organization: 'AEC' },
+    ],
+  },
+  {
+    title: 'Finance Chair',
+    members: [
+      { name: 'Prof. Sumanta Karmakar', organization: 'AEC' },
+      { name: 'Prof. Gurjeet Singh', organization: 'AEC' },
+      { name: 'Mr. Kamlesh Gupta', organization: 'AEC' },
+    ],
+  },
+  {
+    title: 'Technical Chair',
+    members: [
+      { name: 'Prof. Sambit S Mondal', organization: 'AEC' },
+      { name: 'Prof. Lipika Mandal', organization: 'AEC' },
+      { name: 'Prof. Biplab Kumar Mondal', organization: 'AEC' },
+      { name: 'Prof. Bikash Chandra Debnath', organization: 'AEC' },
+      { name: 'Prof. Vedatreyee Chatterjee', organization: 'AEC' },
+      { name: 'Prof. Lumbini Bhaumik', organization: 'AEC' },
+      { name: 'Prof. Khushbu Chandrakar', organization: 'AEC' },
+    ],
+  },
+  {
+    title: 'Technical Committee Members',
+    members: [
+      { name: 'Prof. Sumitra Bhattacharyya', organization: 'AEC' },
+      { name: 'Prof. Jay Bandapadhyay', organization: 'AEC' },
+      { name: 'Prof. Karuna Nandi', organization: 'AEC' },
+      { name: 'Prof. Subhamay Bhattacharyya', organization: 'AEC' },
+      { name: 'Prabal Chakraborty', designation: 'Ex- IEEE SB & MTT-S Treasurer' },
+      { name: 'Biswajit Bose', designation: 'Ex- IEEE SB & MTT-S Chair' },
+      { name: 'Ananya Ghosh', designation: 'Ex- IEEE SB & MTT-S Chair' },
+    ],
+  },
+];
 }
 
   getTracks(): Track[] {
