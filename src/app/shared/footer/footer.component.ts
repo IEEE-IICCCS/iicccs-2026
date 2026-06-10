@@ -10,4 +10,5 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   year = new Date().getFullYear();
+  scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 }

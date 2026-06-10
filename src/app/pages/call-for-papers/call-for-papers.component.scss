@@ -70,3 +70,28 @@
 .submission-info a:hover {
   text-decoration: underline;
 }
+.submit-btn {
+    background: var(--gradient-blue);
+    color: #fff;
+    border: none;
+    padding: 0.2rem 0.4rem;
+    border-radius: 7px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 3px 12px #1a5fad47;
+    transition: background-color 0.35s ease,
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.submit-btn:hover {
+    color: #fff;
+    background: #054a9f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(26, 95, 173, 0.35);
+}

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './author-guidelines.component.html',
   styleUrl: './author-guidelines.component.scss'
 })
-export class AuthorGuidelinesComponent {}
+export class AuthorGuidelinesComponent {
+  openCmt() {
+    window.open('https://cmt3.research.microsoft.com/IICCCS2026', '_blank');
+  }
+}

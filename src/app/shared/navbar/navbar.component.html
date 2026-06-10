@@ -13,13 +13,29 @@
     </button>
 
     <ul class="nav-links" [class.open]="menuOpen()">
-      @for (link of navLinks; track link.path) {
-        <li>
-          <a [routerLink]="link.path" routerLinkActive="active"
-             [routerLinkActiveOptions]="{exact: link.path === '/'}"
-             (click)="closeMenu()">{{ link.label }}</a>
-        </li>
+  @for (link of navLinks; track link.label) {
+    <li>
+      @if (link.externalUrl) {
+        <a
+          [href]="link.externalUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          (click)="closeMenu()"
+        >
+          {{ link.label }}
+        </a>
+      } @else {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+          (click)="closeMenu()"
+        >
+          {{ link.label }}
+        </a>
       }
-    </ul>
+    </li>
+  }
+</ul>
   </div>
 </nav>

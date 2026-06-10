@@ -8,10 +8,15 @@ import { Track } from '../../models/conference.models';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './call-for-papers.component.html',
-  styleUrl: './call-for-papers.component.scss'
+  styleUrl: './call-for-papers.component.scss',
 })
 export class CallForPapersComponent implements OnInit {
   tracks: Track[] = [];
   constructor(private cs: ConferenceService) {}
-  ngOnInit() { this.tracks = this.cs.getTracks(); }
+  ngOnInit() {
+    this.tracks = this.cs.getTracks();
+  }
+  openCmt() {
+    window.open('https://cmt3.research.microsoft.com/IICCCS2026', '_blank');
+  }
 }

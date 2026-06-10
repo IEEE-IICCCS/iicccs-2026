@@ -26,8 +26,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   sponsors = [
     'IEEE Kolkata Section',
     'IEEE AP-MTT Kolkata Chapter',
-    'IEEE Kharagpur Section',
-    'IEEE SB: AEC (MTT-S & AP)',
+    // 'IEEE Kharagpur Section',
+    // 'IEEE SB: AEC (MTT-S & AP)',
   ];
 
   constructor(private cs: ConferenceService) {}

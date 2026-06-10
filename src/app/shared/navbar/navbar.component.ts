@@ -14,15 +14,18 @@ export class NavbarComponent {
   menuOpen = signal(false);
 
   navLinks = [
-    { label: 'Home', path: '/' },
-    { label: 'Committee', path: '/committee' },
-    { label: 'Registration', path: '/registration' },
-    { label: 'Author Guidelines', path: '/author-guidelines' },
-    { label: 'Call for Papers', path: '/call-for-papers' },
-    { label: 'Speakers', path: '/speakers' },
-    { label: 'Contact', path: '/contact' },
-    { label: 'CMT Acknowledgment', path: '/cmt-acknowledgement'},
-  ];
+  { label: 'Home', path: '/' },
+  { label: 'Committee', path: '/committee' },
+  { label: 'Registration', path: '/registration' },
+  { label: 'Author Guidelines', path: '/author-guidelines' },
+  { label: 'Call for Papers', path: '/call-for-papers' },
+  { label: 'Speakers', path: '/speakers' },
+  { label: 'Contact', path: '/contact' },
+  {
+    label: 'About AEC',
+    externalUrl: 'http://www.aecwb.edu.in/'
+  }
+];
 
   @HostListener('window:scroll')
   onScroll() { this.scrolled.set(window.scrollY > 60); }
